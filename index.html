@@ -338,7 +338,7 @@
         const [recipeRaw, imageUrl] = await Promise.all([
           callClaude(
             'You are a friendly cooking instructor. Always respond with valid JSON only — no markdown, no backticks, no explanation. Return exactly this structure: {"ingredients": ["ingredient 1", "ingredient 2"], "steps": ["step 1", "step 2"]}. Ingredients must be an array of strings. Steps must be an array of strings.',
-            'Give me a ' + diet + ' friendly beginner recipe for ' + dish + ' from ' + place + '. Return as JSON with ingredients array and steps array.',
+            'Give me a ' + diet + ' friendly beginner recipe for ' + dish + ' from ' + place + '.It must strictly be a ' + diet + ' dish. Return as JSON with ingredients array and steps array.',
             1000
           ),
           fetchImage(dish)

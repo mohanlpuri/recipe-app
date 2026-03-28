@@ -300,7 +300,7 @@
     // Fetches dish photo from Unsplash
     async function fetchImage(dish) {
       const url = 'https://api.unsplash.com/search/photos'
-                + '?query=' + encodeURIComponent(dish + ' food dish')
+                + '?query=' + encodeURIComponent(dish + ' ' + diet + ' food dish')
                 + '&per_page=1'
                 + '&orientation=landscape'
                 + '&client_id=' + UNSPLASH_KEY
